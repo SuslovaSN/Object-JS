@@ -1,0 +1,223 @@
+body {
+    background-color: #EFEFEF;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    font-size: 14px;
+
+}
+.content {
+    max-width: 1110px;
+    margin: 0 auto;
+    
+}
+
+.content__img{
+    background-image: url(img/content_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    }
+
+.content__genre {
+        padding-top: 350px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+.content__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 56px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+.content__descr {
+        width: 481px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+    }
+
+.interactive {
+        display: flex;
+}
+
+.interactive > div {
+            width: 50%;
+            padding: 30px 0 0 60px;
+        }
+
+.title {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+            margin-bottom: 25px;
+
+}
+
+.interactive__list {
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+.interactive__item {
+            display: block;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 18px;
+            color: #000000;
+            margin-bottom: 15px;
+            padding-right: 40px;
+            text-transform: uppercase;
+}
+
+
+.delete {
+            background-image: url(img/trash.png);
+            cursor: pointer;
+    }
+
+    
+.add > span {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 16px;
+            color: #000000;
+}
+
+
+.add__yes {
+            display: inline;
+            margin-left: 10px;
+}
+
+input[type="text"] {
+            width: 270px;
+            height: 45px;
+            line-height: 50px;
+            font-size: 16px;
+            background: rgba(196, 196, 196, 0.29);
+            border: 1px solid rgba(0, 0, 0, 0.19);
+            padding: 0 15px;
+            outline: none;
+            margin-bottom: 10px;
+            border-radius: 4px;
+
+            }
+
+
+button {
+            display: block;
+            margin-top: 15px;
+            width: 170px;
+            height: 45px;
+            background: #FFD500;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 14px;
+            color: #FFFFFF;
+            border: none;
+            outline: none;
+            cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media(max-width: 940px) {
+    .interactive {
+        display: flex;
+    }
+
+    .interactive > div {
+        width: 100%;
+        padding: 30px 0 0 0px;
+    }
+
+    .add{
+        padding-left: 50px;
+    }
+
+    .interactive__title{
+        padding-left: 50px;
+    }
+
+    .content__img{
+        padding-bottom: 10px;
+        padding-left: 50px;
+}
+}
+
+@media(max-width: 830px) {
+    .interactive {
+        display: block;
+    }
+
+    .add{
+        padding-left: 25px;
+    }
+
+ 
+    .interactive__title{
+        padding-left: 25px;
+    }
+
+    .content__img{
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 10px;
+}
+
+.content__genre {
+    padding-top: 250px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content__title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.content__descr {
+    width: 100%;
+    font-size: 14px;
+}
+}
+
+@media(max-width: 630px){
+    .interactive {
+        display: block;
+    }
+
+    .interactive > div {
+        width: 100%;
+        padding: 30px 0 0 0px;
+    }
+
+}
+
+@media(max-width: 430px) {
+    .interactive {
+        display: block;
+    }
+
+    .interactive > div {
+        width: 100%;
+    }  
+
+.content__img{
+    padding-left: 25px;
+}
+}
