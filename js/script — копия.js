@@ -25,19 +25,12 @@ function addFilm (){
         event.preventDefault();
         const newFilm = addInput.value;
     
-        try {        
-        
         if (newFilm) {
             movieDB.movies.push(newFilm);
             movieDB.movies.sort();
             createMovieList(movieDB.movies, movieList);
-                    }
+        }
         addForm.reset();
-        }
-
-        catch (e) {
-            console.error(e);
-        }
     }
     );
 }
@@ -55,7 +48,6 @@ function createMovieList(films, parent) {
     });
 
     deleteFilm();
-    makeBlock(movieList)("li")(3);
 
 
 }
@@ -64,15 +56,15 @@ createMovieList(movieDB.movies, movieList);
 
 
 
-// ДЗ №3: переопределение consol.log
-let oldLog = window.console.log; /*запоминаем старый функционал*/
+//ДЗ №3: переопределение consol.log
+// let oldLog = window.console.log; /*запоминаем старый функционал*/
 
-window.console.log = function () { /*переопределяем новую функцию*/
-        Array.prototype.unshift.call(arguments, "Сообщение в консоли:"); /* преобразуем псевдомассив в массив в контексте аргументов функции, добавляем сообщение в начало массива  */
-        oldLog.apply(this, arguments);
-};
+// window.console.log = function () { /*переопределяем новую функцию*/
+//         Array.prototype.unshift.call(arguments, "Сообщение в консоли:"); /* преобразуем псевдомассив в массив в контексте аргументов функции, добавляем сообщение в начало массива  */
+//         oldLog.apply(this, arguments);
+// };
 
-console.log("hi");
+// console.log("hi");
 
 //ДЗ №5: добавление блоков через консоль
 
@@ -137,9 +129,9 @@ function makeBlock(parent){
 }
 };
 
-//makeBlock(movieList)("li")(3);
+makeBlock(movieList)("li")(3);
 
-// Удаление фильма из блока:
+// Удаление из блока:
 
 function deleteFilm(){
     let delFilm = document.querySelectorAll(".delete");
@@ -153,4 +145,4 @@ function deleteFilm(){
     });
 }
 
-deleteFilm(); 
+deleteFilm();
